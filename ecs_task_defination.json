@@ -1,0 +1,152 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:695182496785:task-definition/poc-subscription-dev-task:10",
+    "containerDefinitions": [
+        {
+            "name": "poc-subscription-dev-container",
+            "image": "public.ecr.aws/i9h4o5o0/payer1-subscription-dev-public:latest",
+            "cpu": 1024,
+            "memory": 5120,
+            "memoryReservation": 2048,
+            "portMappings": [
+                {
+                    "name": "p1-subscription-dev-port-3000",
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "JWT_ACCESS_TOKEN_EXPIRY_IN_SECONDS",
+                    "value": "86400"
+                },
+                {
+                    "name": "REDIS_HOST",
+                    "value": "p1-dev-redis-cluster.myivve.0001.use1.cache.amazonaws.com"
+                },
+                {
+                    "name": "APP_ENV",
+                    "value": "dev"
+                },
+                {
+                    "name": "GENERAL_QUEUE_NAME",
+                    "value": "FrameworkGeneralQueue.fifo"
+                },
+                {
+                    "name": "AUTH_BIO_HASH_SECRET",
+                    "value": "dummy"
+                },
+                {
+                    "name": "SENDGRID_API_KEY",
+                    "value": "dummy"
+                },
+                {
+                    "name": "ENV",
+                    "value": "dev"
+                },
+                {
+                    "name": "JWT_ACCESS_TOKEN_SECRET",
+                    "value": "LS0tLS1CRUdJTiBFQyBQQVJBTUVURVJTLS0tLS0KQmdncWhrak9QUU1CQnc9PQotLS0tLUVORCBFQyBQQVJBTUVURVJTLS0tLS0KLS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUNjaTZudDA3dmRjU3EzakdxR1dlck5jLzUrOFJwUDlXMU16MElDR2JISUNvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRGxEUmRrMUJrMzVqT3V2VVk0QnNkdXdUTTBkbGpIN3J2S2lIdFJCOGxZaTBTdmJmc0xSRApTZjU3dWdwQW5TRU11QTNtQzNGTnpQbDhRS0s0K1VoTlh3PT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo="
+                },
+                {
+                    "name": "TWILIO_PHONE_NUMBER",
+                    "value": "8337051130"
+                },
+                {
+                    "name": "REDIS_PORT",
+                    "value": "6379"
+                },
+                {
+                    "name": "SIGN_KEY",
+                    "value": "LS0tLS1CRUdJTiBFQyBQQVJBTUVURVJTLS0tLS0KQmdncWhrak9QUU1CQnc9PQotLS0tLUVORCBFQyBQQVJBTUVURVJTLS0tLS0KLS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUNjaTZudDA3dmRjU3EzakdxR1dlck5jLzUrOFJwUDlXMU16MElDR2JISUNvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRGxEUmRrMUJrMzVqT3V2VVk0QnNkdXdUTTBkbGpIN3J2S2lIdFJCOGxZaTBTdmJmc0xSRApTZjU3dWdwQW5TRU11QTNtQzNGTnpQbDhRS0s0K1VoTlh3PT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo="
+                },
+                {
+                    "name": "TWILIO_SERVICE_SID",
+                    "value": "VA40edcfdf9ce3b0f478e777fd30a4495b"
+                },
+                {
+                    "name": "DEPLOYMENT_ENV",
+                    "value": "dev"
+                },
+                {
+                    "name": "JWT_REFRESH_TOKEN_SECRET",
+                    "value": "LS0tLS1CRUdJTiBFQyBQQVJBTUVURVJTLS0tLS0KQmdncWhrak9QUU1CQnc9PQotLS0tLUVORCBFQyBQQVJBTUVURVJTLS0tLS0KLS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUtyZ0hxMVlYZVNtdzllWEJyQ0cxWVkyWFVHYklXQkdPV1AzYlNDWWdoaDFvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRWtlK3piU0ROODdEcjQvZTNHVklRY3ZGV2hpdjRJcmhFb2pVbFFSODA4eDA2VVJDR0NPZgpWTmF0dVU3THE4UHNDRVByVEVQMXBydzJOeW9lTElJdjJnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo"
+                },
+                {
+                    "name": "NODE_ENV",
+                    "value": "development"
+                },
+                {
+                    "name": "PACKAGE_ONLY",
+                    "value": "true"
+                },
+                {
+                    "name": "JWT_REFRESH_TOKEN_EXPIRY_IN_SECONDS",
+                    "value": "259200"
+                },
+                {
+                    "name": "PRIORITY_QUEUE_NAME",
+                    "value": "LS0tLS1CRUdJTiBFQyBQQVJBTUVURVJTLS0tLS0KQmdncWhrak9QUU1CQnc9PQotLS0tLUVORCBFQyBQQVJBTUVURVJTLS0tLS0KLS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUtyZ0hxMVlYZVNtdzllWEJyQ0cxWVkyWFVHYklXQkdPV1AzYlNDWWdoaDFvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRWtlK3piU0ROODdEcjQvZTNHVklRY3ZGV2hpdjRJcmhFb2pVbFFSODA4eDA2VVJDR0NPZgpWTmF0dVU3THE4UHNDRVByVEVQMXBydzJOeW9lTElJdjJnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo="
+                },
+                {
+                    "name": "TWILIO_AUTH_TOKEN",
+                    "value": "LS0tLS1CRUdJTiBFQyBQQVJBTUVURVJTLS0tLS0KQmdncWhrak9QUU1CQnc9PQotLS0tLUVORCBFQyBQQVJBTUVURVJTLS0tLS0KLS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUNjaTZudDA3dmRjU3EzakdxR1dlck5jLzUrOFJwUDlXMU16MElDR2JISUNvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRGxEUmRrMUJrMzVqT3V2VVk0QnNkdXdUTTBkbGpIN3J2S2lIdFJCOGxZaTBTdmJmc0xSRApTZjU3dWdwQW5TRU11QTNtQzNGTnpQbDhRS0s0K1VoTlh3PT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo="
+                },
+                {
+                    "name": "TWILIO_ACCOUNT_SID",
+                    "value": "LS0tLS1CRUdJTiBFQyBQQVJBTUVURVJTLS0tLS0KQmdncWhrak9QUU1CQnc9PQotLS0tLUVORCBFQyBQQVJBTUVURVJTLS0tLS0KLS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUNjaTZudDA3dmRjU3EzakdxR1dlck5jLzUrOFJwUDlXMU16MElDR2JISUNvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRGxEUmRrMUJrMzVqT3V2VVk0QnNkdXdUTTBkbGpIN3J2S2lIdFJCOGxZaTBTdmJmc0xSRApTZjU3dWdwQW5TRU11QTNtQzNGTnpQbDhRS0s0K1VoTlh3PT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo="
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "systemControls": [],
+            "resourceRequirements": [
+                {
+                    "value": "1",
+                    "type": "GPU"
+                }
+            ]
+        }
+    ],
+    "family": "poc-subscription-dev-task",
+    "taskRoleArn": "arn:aws:iam::695182496785:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::695182496785:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 10,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "2048",
+    "memory": "7168",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-03-15T14:08:55.006Z",
+    "registeredBy": "arn:aws:iam::695182496785:user/sachin",
+    "tags": []
+}
